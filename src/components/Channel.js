@@ -31,7 +31,7 @@ const Channel = ({ user = null, db = null }) => {
   }, [db]);
 
   useEffect(() => {
-    if (messages[messages.length - 1].uid === user.uid)
+    if (messages.length > 0)
       messagesContainer.current.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
