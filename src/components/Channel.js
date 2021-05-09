@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
+import { useSound } from "use-sound";
+import sound from "../assets/sound.wav";
 import firebase from "firebase/app";
 import Message from "./Message";
-import userEvent from "@testing-library/user-event";
 
 const Channel = ({ user = null, db = null }) => {
   const [messages, setMessages] = useState([]);
